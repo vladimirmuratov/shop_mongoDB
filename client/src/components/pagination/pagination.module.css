@@ -1,0 +1,43 @@
+.pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    /*margin: 1rem auto;*/
+    /*position: absolute;*/
+    /*bottom: -80px;*/
+    /*bottom: -5%;*/
+   /* left: 50%;
+    transform: translate(-50%, -50%);*/
+}
+
+.pagination .text {
+    color: aliceblue;
+    opacity: 0.6;
+    font-size: 1.5rem;
+}
+
+.page {
+    color: white;
+    height: 3rem;
+    width: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    border: solid 0.2rem #4aa5be;
+    background-color: transparent;
+    border-radius: 0.7rem;
+    cursor: pointer;
+}
+
+.page.active,
+.page:hover {
+    background-color: #4aa5be;
+}
+
+.disabled {
+    background-color: transparent !important;
+    cursor: not-allowed;
+    opacity: 0.5;
+}
