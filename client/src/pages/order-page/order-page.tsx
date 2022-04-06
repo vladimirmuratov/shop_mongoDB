@@ -19,7 +19,7 @@ export const OrderPage: React.FC = (): JSX.Element => {
         <>
             {sortedOrders.length
                 ? (<div className={styles.orderPage_wrapper}>
-                    {sortedOrders.map(order => <Order key={order.orderId} {...order}/>)}
+                    {sortedOrders.map(order => <Order key={order._id} {...order}/>)}
                 </div>)
                 : <h1>Заказов нет</h1>
             }

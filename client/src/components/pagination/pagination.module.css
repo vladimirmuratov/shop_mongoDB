@@ -3,12 +3,6 @@
     align-items: center;
     justify-content: center;
     gap: 1rem;
-    /*margin: 1rem auto;*/
-    /*position: absolute;*/
-    /*bottom: -80px;*/
-    /*bottom: -5%;*/
-   /* left: 50%;
-    transform: translate(-50%, -50%);*/
 }
 
 .pagination .text {

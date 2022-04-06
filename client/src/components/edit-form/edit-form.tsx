@@ -1,9 +1,9 @@
-import React, {useEffect, useState} from "react";
+import React from "react";
 import {useForm} from "react-hook-form";
 import {TProduct} from "../../types";
 import styles from "./edit-form.module.css";
 import {useHistory} from "react-router-dom";
-import {loadGoods, update} from "../../store/goods";
+import {create, loadGoods, update} from "../../store/goods";
 import {useDispatch, useSelector} from "react-redux";
 import {RootState} from "../../store/store";
 import {toast} from "react-toastify";
@@ -18,7 +18,7 @@ export const EditForm: React.FC<TProps> = ({product = {}, onClose, isAdd}): JSX.
     const history = useHistory()
     const dispatch = useDispatch()
     const {data, message} = useSelector((state: RootState) => state.data)
-    const {id, image, inStock, price, manufacturer, name, type} = product
+    const {_id, image, inStock, price, manufacturer, name, type} = product
     const {register, handleSubmit, formState: {errors}} = useForm()
     // console.log('errors', Object.keys(errors).length)
 
@@ -26,7 +26,7 @@ export const EditForm: React.FC<TProps> = ({product = {}, onClose, isAdd}): JSX.
 
     function getTypes() {
         const types: Array<string> = []
-        data.map(item => {
+        data.forEach(item => {
             if (!types.includes(item.type)) {
                 types.push(item.type)
             }
@@ -36,7 +36,7 @@ export const EditForm: React.FC<TProps> = ({product = {}, onClose, isAdd}): JSX.
 
     function getImages() {
         const images: Array<string> = []
-        data.map(item => {
+        data.forEach(item => {
             if (!images.includes(item.image)) {
                 images.push(item.image)
             }
@@ -45,7 +45,6 @@ export const EditForm: React.FC<TProps> = ({product = {}, onClose, isAdd}): JSX.
     }
 
     const onSubmit = async (data: any) => {
-        // console.log(data)
         if (Object.keys(errors).length === 0) {
             if (!isAdd) {
                 try {
@@ -57,7 +56,7 @@ export const EditForm: React.FC<TProps> = ({product = {}, onClose, isAdd}): JSX.
                 }
             } else {
                 try {
-                    await dispatch(update(data))
+                    await dispatch(create(data))
                     await dispatch(loadGoods())
                     history.push("/admin")
 
@@ -70,7 +69,7 @@ export const EditForm: React.FC<TProps> = ({product = {}, onClose, isAdd}): JSX.
 
     return (
         <form onSubmit={handleSubmit(onSubmit)} className={`container ${styles.editForm_wrapper}`}>
-            <input {...register("id", {required: true})} defaultValue={id ? id : nextId} placeholder="id"/>
+            <input {...register("_id", {required: true})} defaultValue={_id ? _id : nextId} placeholder="id"/>
             {errors.id?.type === "required" && <span className="error">поле обязательно для заполнения</span>}
             <input {...register("name", {required: true})} defaultValue={name ? name : ""} placeholder="наименование"/>
             {errors.name?.type === "required" && <span className="error">поле обязательно для заполнения</span>}

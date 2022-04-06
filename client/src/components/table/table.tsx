@@ -27,11 +27,14 @@ export const Table: React.FC<TProps> = ({data, isLoading, message}): JSX.Element
     }, [message])
 
     const handleDelete = (id: string) => {
-        dispatch(removeFromTable(id))
+        const answer = window.confirm(`Вы подтверждаете удаление?`)
+        if (answer) {
+            dispatch(removeFromTable(id))
+        }
     }
 
-    const handleEditClick = (id: string) => {
-        const prod = data?.find(item => item.id === id)
+    const handleEdit = (id: string) => {
+        const prod = data?.find(item => item._id === id)
         setCurrentProduct(prod)
         setModalIsOpen(true)
     }
@@ -57,20 +60,20 @@ export const Table: React.FC<TProps> = ({data, isLoading, message}): JSX.Element
                         </thead>
                         <tbody>
                         {data?.map(item => (
-                            <tr key={item.id}>
-                                <td>{item.id}</td>
+                            <tr key={item._id}>
+                                <td>{item._id}</td>
                                 <td>{item.name}</td>
                                 <td>{item.manufacturer}</td>
                                 <td>{item.price}</td>
                                 <td>{item.inStock}</td>
                                 <td>url</td>
                                 <td>
-                                    <EditIcon onClick={() => handleEditClick(item.id)}/>
+                                    <EditIcon onClick={() => handleEdit(item._id)}/>
                                     &nbsp;
                                     &nbsp;
                                     &nbsp;
                                     <CloseIcon onClick={() => {
-                                        handleDelete(item.id)
+                                        handleDelete(item._id)
                                     }}/>
                                 </td>
                             </tr>

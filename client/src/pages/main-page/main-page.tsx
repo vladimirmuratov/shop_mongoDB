@@ -58,7 +58,7 @@ export const MainPage: FC = (): JSX.Element => {
                     {name && !filterByName?.length &&
                     <p className={styles.error}>{`По запросу "${name}" ничего не найдено`}</p>}
                     {productsOnPage?.slice(firstContentIndex, lastContentIndex).map(item => <Card
-                        key={item.id} {...item}/>)}
+                        key={item._id} {...item}/>)}
                 </ul>
                 {totalPages && (<div className={styles.mainPage_pagination}>
                     <Pagination page={page} totalPages={totalPages} firstContentIndex={firstContentIndex}

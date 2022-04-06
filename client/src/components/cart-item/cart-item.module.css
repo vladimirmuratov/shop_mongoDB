@@ -21,8 +21,6 @@
     align-items: center;
     justify-content: space-between;
     width: 150px;
-    /*flex-direction: column;*/
-    /*align-items: flex-start;*/
 }
 
 .cartItem_title {

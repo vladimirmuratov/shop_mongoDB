@@ -24,7 +24,6 @@ function App() {
     useEffect(() => {
         dispatch(loadGoods())
         dispatch(getCurrentUser())
-        // dispatch(fetchOrder())
     }, [dispatch])
 
     return (
@@ -33,7 +32,6 @@ function App() {
             {isLoading
                 ? <Loader/>
                 : (<>
-                    {/*<Search/>*/}
                     <Switch>
                         <ProtectedRoute exact path="/cart">
                             <CartPage/>

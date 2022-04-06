@@ -1,7 +1,7 @@
 import httpService from "./http.service";
 import {TOrder} from "../store/types/order";
 
-const orderEndPoint = "orders/"
+const orderEndPoint = "/order/"
 
 export const orderService = {
     fetch: async () => {
@@ -13,25 +13,25 @@ export const orderService = {
             throw errorObject
         }
     },
-    create: async (id: string, payload: TOrder) => {
+    create: async (payload: TOrder) => {
         try {
-            const {data} = await httpService.put(orderEndPoint + id, payload)
+            const {data} = await httpService.post(orderEndPoint, payload)
             return data
         }catch (error) {
             const errorObject = "Что-то пошло не так. Попробуйте позже"
             throw errorObject
         }
     },
-    update: async (id: string, payload: any) => {
+    update: async (orderId: "" | string | undefined, payload: any) => {
         try {
-            const {data} = await httpService.patch(orderEndPoint + id, payload)
+            const {data} = await httpService.patch(orderEndPoint + orderId, payload)
             return data
         }catch (error) {
             const errorObject = "Что-то пошло не так. Попробуйте позже"
             throw errorObject
         }
     },
-    remove: async (orderId: string) => {
+    remove: async (orderId: string | undefined) => {
         try {
             const {data} = await httpService.delete(orderEndPoint + orderId)
             return data

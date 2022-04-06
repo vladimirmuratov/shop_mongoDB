@@ -4,34 +4,11 @@
     letter-spacing: 5px;
 }
 
-/*.form_position {
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}*/
-
-/*.form_container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 100%;
-}*/
-
 label {
     align-self: flex-start;
     font-size: 18px;
     color: aliceblue;
 }
-
-/*input {
-    margin: 10px 0;
-    padding: 10px;
-    border-radius: 10px;
-    font-size: 18px;
-}*/
 
 .btn_login_form {
     width: 100px;
@@ -47,14 +24,6 @@ label {
     background-color: aliceblue;
     color: #2f2fa2;
 }
-
-/*.error {
-    color: red;
-    align-self: flex-start;
-    margin: 3px 0 10px 0;
-    font-size: 16px;
-    text-align: left;
-}*/
 
 .wrapper_link {
     color: aliceblue;

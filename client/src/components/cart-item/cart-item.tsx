@@ -7,12 +7,12 @@ import {useDispatch} from "react-redux";
 
 type TProps = TProduct
 
-export const CartItem: FC<TProps> = ({id, name, image, price, count}): JSX.Element => {
+export const CartItem: FC<TProps> = ({_id, name, image, price, count}): JSX.Element => {
     const dispatch = useDispatch()
 
     const handleDeleteCartItem = useCallback(() => {
-        dispatch(removeFromCart(id))
-    }, [dispatch, id])
+        dispatch(removeFromCart(_id))
+    }, [dispatch, _id])
 
     return (
         <li className={styles.cartItem_container}>
@@ -21,7 +21,7 @@ export const CartItem: FC<TProps> = ({id, name, image, price, count}): JSX.Eleme
                 <img className={styles.cartItem_image} src={image} alt={name}/>
             </picture>
             <div className={styles.cartItem_section}>
-                <p>{`id: ${id}`}</p>
+                <p>{`id: ${_id.slice(-4)}`}</p>
                 <p className={styles.cartItem_title}>{name}</p>
             </div>
             {count && <p>{`Количество: ${count}`}</p>}

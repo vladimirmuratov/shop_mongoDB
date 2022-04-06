@@ -10,7 +10,7 @@ export const ProductDetailsPage: FC = (): JSX.Element => {
     const dispatch = useDispatch()
     const {id} = useParams<{ type: string, id: string }>()
     const {data} = useSelector((state: RootState) => state.data)
-    const findProduct = data.find(item => item.id === id)
+    const findProduct = data.find(item => item._id === id)
     const [count, setCount] = useState(1)
     const [total, setTotal] = useState<number | null>(null)
     const [addedInCart, setAddedToCart] = useState(false)
@@ -70,7 +70,7 @@ export const ProductDetailsPage: FC = (): JSX.Element => {
                         </p>
                         <p className={styles.product_price}>{`стоимость: $ ${total}`}</p>
                         {addedInCart && <p style={{color: '#00cc00'}}>Товар добавлен в карзину</p>}
-                        <p className={styles.product_id}>{`id: ${id}`}</p>
+                        <p className={styles.product_id}>{`id: ${id.slice(-4)}`}</p>
                         {inStock ? (<button
                             className={`btn ${styles.btn_position}`}
                             onClick={() => handleAddProductToCart(id, count)}

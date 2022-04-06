@@ -11,9 +11,9 @@ export type TCart = {
 }
 
 export type TOrder = {
-    orderId: string;
+    _id?: string;
+    createdAt?: string;
     userId: string;
-    created_at: number;
     order: Array<TCart>;
     completed: boolean;
 }

@@ -13,15 +13,14 @@ type TProps = {
 }
 
 Modal.setAppElement('#root');
-export const ModalComponent:React.FC<TProps> = ({modalIsOpen, onClose, product, isAdd}): JSX.Element => {
-    // console.log('productInModal', product)
+export const ModalComponent: React.FC<TProps> = ({modalIsOpen, onClose, product, isAdd}): JSX.Element => {
 
-    return(
+    return (
         <Modal
             isOpen={modalIsOpen}
         >
-                <CloseIcon onClick={onClose} position={styles.closeIcon_position} size={26}/>
-                <EditForm product={product} onClose={onClose} isAdd={isAdd}/>
+            <CloseIcon onClick={onClose} position={styles.closeIcon_position} size={26}/>
+            <EditForm product={product} onClose={onClose} isAdd={isAdd}/>
         </Modal>
     )
 }

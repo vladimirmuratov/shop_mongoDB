@@ -45,11 +45,11 @@ export const fetchOrders = () => async (dispatch: any) => {
     }
 }
 
-export const createOrder = (orderId: string, payload: TOrder) => async (dispatch: any) => {
+export const createOrder = (payload: TOrder) => async (dispatch: any) => {
     dispatch(requested())
     try {
         if (payload) {
-            await orderService.create(orderId, payload)
+            await orderService.create(payload)
             await dispatch(fetchOrders())
         }
 
@@ -58,7 +58,7 @@ export const createOrder = (orderId: string, payload: TOrder) => async (dispatch
     }
 }
 
-export const completeOrder = (orderId: string) => async (dispatch: any) => {
+export const completeOrder = (orderId: "" | string | undefined) => async (dispatch: any) => {
     dispatch(requested())
     try {
         await orderService.update(orderId, {completed: true})
@@ -68,11 +68,11 @@ export const completeOrder = (orderId: string) => async (dispatch: any) => {
     }
 }
 
-export const removeOrder = (orderId: string) => async (dispatch: any) => {
+export const removeOrder = (orderId: string | undefined) => async (dispatch: any) => {
     dispatch(requested())
     try {
         const {content} = await orderService.remove(orderId)
-        if (content === null){
+        if (content === "") {
             dispatch(fetchOrders())
         }
         dispatch(removed())

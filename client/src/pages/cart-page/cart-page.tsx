@@ -11,7 +11,6 @@ import {createOrder} from "../../store/order";
 import {clearCart, updateInStock} from "../../store/goods";
 import {useHistory} from "react-router-dom";
 import {TCart, TOrder} from "../../store/types/order";
-import {nanoid} from "nanoid";
 import {toast} from "react-toastify";
 
 export const CartPage: FC = (): JSX.Element => {
@@ -44,9 +43,9 @@ export const CartPage: FC = (): JSX.Element => {
     function getNewInStock(data: Array<TProduct>, cart: Array<TCart>, dispatch: any, action: any) {
         data.forEach(item => {
             cart.forEach(c => {
-                if (item.id === c.id) {
-                    const payload = item.inStock - c.count
-                    dispatch(action(item.id, payload))
+                if (item._id === c.id) {
+                    const payload = Number(item.inStock) - Number(c.count)
+                    dispatch(action(item._id, payload))
                 }
             })
         })
@@ -54,16 +53,13 @@ export const CartPage: FC = (): JSX.Element => {
 
     const handleSubmit = async () => {
 
-        const orderId = nanoid()
         const payload: TOrder = {
-            orderId: orderId,
             userId: _id,
-            created_at: Date.now(),
             completed: false,
             order: cart
         }
-        await dispatch(createOrder(orderId, payload))
-        toast.success(`заказ № ...${orderId.slice(-4)} отправлен`)
+        await dispatch(createOrder(payload))
+        toast.success(`заказ отправлен`)
         getNewInStock(data, cart, dispatch, updateInStock)
 
         if (!hasError) {
@@ -76,7 +72,7 @@ export const CartPage: FC = (): JSX.Element => {
         setProductsInCart([])
         for (let itemData of data) {
             for (let itemCart of cart) {
-                if (itemData.id === itemCart.id) {
+                if (itemData._id === itemCart.id) {
                     setProductsInCart(prevState => [
                         ...prevState,
                         {

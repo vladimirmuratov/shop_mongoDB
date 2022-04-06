@@ -1,12 +1,10 @@
 .cartPage_wrapper {
     width: 100vw;
-    /*max-height: 75vh;*/
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
     padding: 0 2rem;
-    /*overflow: scroll;*/
 }
 
 .cartPage_container {
@@ -17,8 +15,6 @@
     align-items: center;
     height: 85vh;
     overflow: auto;
-    /*overflow-y: scroll;*/
-    /*scroll-behavior: smooth;*/
 }
 
 .cartPage_cartEmpty {
@@ -66,7 +62,6 @@
     }
     .sidebar_wrapper{
         right: 5px;
-        /*top: 0;*/
     }
 }
 

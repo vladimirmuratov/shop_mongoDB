@@ -4,10 +4,7 @@ import configFile from "../configFile.json";
 import {localStorageService} from "./localStorage.service";
 
 export const httpAuth = axios.create({
-    baseURL: "https://identitytoolkit.googleapis.com/v1/",
-    params: {
-        key: process.env.REACT_APP_FIREBASE_KEY
-    }
+    baseURL: configFile.apiEndpoint + "/auth"
 })
 
 const http = axios.create({
@@ -15,31 +12,55 @@ const http = axios.create({
 })
 
 http.interceptors.request.use(async function (config) {
+        const accessToken = localStorageService.getAccessToken();
+        const refreshToken = localStorageService.getRefreshToken();
+        const expiresDate = localStorageService.getTokenExpiresDate();
+        // @ts-ignore
+        const isExpired = refreshToken && expiresDate < Date.now();
+
         if (configFile.isFireBase) {
             // @ts-ignore
             const containSlash = /\/$/gi.test(config.url);
             config.url =
-            // @ts-ignore
+                // @ts-ignore
                 (containSlash ? config.url.slice(0, -1) : config.url) + ".json";
-            const expiresDate = localStorageService.getTokenExpiresDate();
-            const refreshToken = localStorageService.getRefreshToken();
+
             // @ts-ignore
-            if (refreshToken && expiresDate < Date.now()) {
-                const { data } = await httpAuth.post("token", {
+            if (isExpired) {
+                const {data} = await httpAuth.post("/token", {
                     grant_type: "refresh_token",
                     refresh_token: refreshToken
                 });
 
                 localStorageService.setTokens({
-                    refreshToken: data.refresh_token,
-                    idToken: data.id_token,
+                    refreshToken: data.refreshToken,
+                    accessToken: data.accessToken,
                     expiresIn: data.expires_id,
-                    localId: data.user_id
+                    userId: data.userId
                 });
             }
-            const accessToken = localStorageService.getAccessToken();
+
             if (accessToken) {
-                config.params = { ...config.params, auth: accessToken };
+                config.params = {...config.params, auth: accessToken};
+            }
+        } else {
+            if (isExpired) {
+                const {data} = await httpAuth.post("/token", {
+                    refreshToken
+                });
+                localStorageService.setTokens({
+                    refreshToken: data.refreshToken,
+                    accessToken: data.accessToken,
+                    expiresIn: data.expires_id,
+                    userId: data.userId
+                });
+            }
+
+            if (accessToken) {
+                config.headers = {
+                    ...config.params,
+                    Authorization: `Bearer ${accessToken}`
+                };
             }
         }
         return config;
@@ -61,6 +82,8 @@ http.interceptors.response.use(
     (res) => {
         if (configFile.isFireBase) {
             res.data = {content: transformData(res.data)};
+        }else {
+            res.data = { content: res.data }
         }
         return res
     },

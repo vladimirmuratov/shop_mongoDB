@@ -1,11 +1,11 @@
 export type TGoods = {
-    id: string;
+    _id: string;
     type: string;
     name: string;
 }
 
 export type TProduct = {
-    id: string;
+    _id: string;
     type: string;
     manufacturer: string;
     name: string;

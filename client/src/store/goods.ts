@@ -39,7 +39,7 @@ const goodsSlice = createSlice({
             state.cart = state.cart.filter(item => item.id !== action.payload)
         },
         removedFromTable(state, action) {
-            state.data = state.data.filter(item => item.id !== action.payload)
+            state.data = state.data.filter(item => item._id !== action.payload)
             state.isLoading = false
             state.hasError = false
             state.message = ""
@@ -59,9 +59,9 @@ const {received, requested, failed, addedToCart, removedFromCart, removedFromTab
 export const loadGoods = () => async (dispatch: any) => {
     dispatch(requested())
     try {
-        const {content} = await goodsService.fetch()
+        const {data} = await goodsService.fetch()
         // const sortedContent = _.sortBy(content, ["type"], ["asc"])
-        dispatch(received(content))
+        dispatch(received(data.content))
 
     } catch (error) {
         dispatch(failed(error))
@@ -80,7 +80,7 @@ export const removeFromTable = (id: string) => async (dispatch: any) => {
     dispatch(requested())
     try {
         const {content} = await goodsService.remove(id)
-        if (content === null) {
+        if (content) {
             dispatch(removedFromTable(id))
         }
     } catch (error) {
@@ -92,6 +92,15 @@ export const update = (payload: TProduct) => async (dispatch: any) => {
     dispatch(requested())
     try {
         await goodsService.update(payload)
+    } catch (error) {
+        dispatch(failed(error))
+    }
+}
+
+export const create = (payload: TProduct) => async (dispatch: any) => {
+    dispatch(requested())
+    try {
+        await goodsService.create(payload)
     } catch (error) {
         dispatch(failed(error))
     }
