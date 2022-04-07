@@ -7,6 +7,8 @@ export type TUserState = {
         _id: string;
         name: string;
         email: string;
-        image: string
+        image: string;
+        createdAt?: string;
+        updatedAt?: string;
     }
 }

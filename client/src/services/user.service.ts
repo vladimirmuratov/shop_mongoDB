@@ -5,9 +5,7 @@ const userEndpoint = "/user/";
 
 const userService = {
     getCurrentUser: async () => {
-        const {data} = await httpService.get(
-            userEndpoint + localStorageService.getUserId()
-        );
+        const {data} = await httpService.get(userEndpoint + localStorageService.getUserId());
         return data;
     }
 };

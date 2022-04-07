@@ -39,7 +39,7 @@ export const Header = () => {
                             </span>
                                 <ul className={styles.drop_menu}>
                                     {isAdmin && <li><Link to="/admin">admin_panel</Link></li>}
-                                    <li>Profile</li>
+                                    <li><Link to="/profile">Profile</Link></li>
                                     <li onClick={handleLogOut}>Log Out</li>
                                 </ul>
                                 <span className={styles.triangle_icon}/>

@@ -1,0 +1,38 @@
+.profilePage_wrapper{
+    position: fixed;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50vw;
+    height: 80vh;
+    background-color: #99738e;
+    border: 2px solid darkgray;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.profilePage_block{
+    width: 100%;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    padding: 10px;
+}
+
+.profilePage_title{
+    font-size: 20px;
+    color: aliceblue;
+    text-decoration: underline;
+}
+
+.profilePage_result{
+    font-size: 20px;
+    color: aliceblue;
+    border: 2px solid dimgray;
+    border-radius: 5px;
+    padding: 10px;
+}

@@ -20,55 +20,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="00828a5f-4f98-49d9-9734-14322d377c18" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/.env.development" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/admin-panel/admin-panel.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/admin-panel/admin-panel.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/components/app/app.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/app/app.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/card/card.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/card/card.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/cart-item/cart-item.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/cart-item/cart-item.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/cart-item/cart-item.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/cart-item/cart-item.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/edit-form/edit-form.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/edit-form/edit-form.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/initial-data-component/initial-data-component.module.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/initial-data-component/initial-data-component.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/login-form/login-form.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/login-form/login-form.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/modal-component/modal-component.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/modal-component/modal-component.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/order/order.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/order/order.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/order/order.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/order/order.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/pagination/pagination.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/pagination/pagination.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/sidebar/sidebar.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/sidebar/sidebar.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/table/table.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/table/table.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/configFile.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/configFile.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/fakeApi/data.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/mockData/goods.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/pages/cart-page/cart-page.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/cart-page/cart-page.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/pages/cart-page/cart-page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/cart-page/cart-page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/pages/login-page/login-page.module.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/pages/main-page/main-page.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/main-page/main-page.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/pages/main-page/main-page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/main-page/main-page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/pages/order-page/order-page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/order-page/order-page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/pages/product-details-page/product-details-page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/product-details-page/product-details-page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/services/goods.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/services/goods.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/services/http.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/services/http.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/services/httpAuth.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/services/httpAuth.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/services/localStorage.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/services/localStorage.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/services/order.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/services/order.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/header/header.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/header/header.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/header/header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/header/header.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/services/user.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/services/user.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/store/goods.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/store/goods.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/store/order.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/store/order.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/store/types/order.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/store/types/order.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/types.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/utils/getRandomAvatar.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/utils/getRandomAvatar.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/utils/useMockData.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/app/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/app/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/models/Cart.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/models/Order.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/server/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/store/types/user.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/store/types/user.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/app/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/app.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/server/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/routes/auth.routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/routes/auth.routes.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/routes/cart.routers.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/routes/order.routers.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/routes/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/routes/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/routes/products.routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/routes/products.routes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/routes/user.routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/routes/user.routes.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,6 +40,9 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="27NjFl5Twlz0lJ1lpIyTtjmhffQ" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -91,6 +55,11 @@
     <property name="ts.external.directory.path" value="D:\DEV\VLADILEN_MININ\MyProjects\internet-shop_mongoDb\client\node_modules\typescript\lib" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\DEV\VLADILEN_MININ\MyProjects\internet-shop_mongoDb\server" />
+    </key>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -102,6 +71,8 @@
       <workItem from="1649167375210" duration="479000" />
       <workItem from="1649167871975" duration="17932000" />
       <workItem from="1649236858662" duration="17739000" />
+      <workItem from="1649319003834" duration="3422000" />
+      <workItem from="1649333132360" duration="6074000" />
     </task>
     <servers />
   </component>
@@ -121,9 +92,17 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="303" y="0" width="672" height="678" key="search.everywhere.popup" timestamp="1649262070089">
+    <state x="421" y="92" key="FileChooserDialogImpl" timestamp="1649329351046">
       <screen x="0" y="0" width="1280" height="672" />
     </state>
-    <state x="303" y="0" width="672" height="678" key="search.everywhere.popup/0.0.1280.672@0.0.1280.672" timestamp="1649262070089" />
+    <state x="421" y="92" key="FileChooserDialogImpl/0.0.1280.672@0.0.1280.672" timestamp="1649329351046" />
+    <state x="347" y="69" width="587" height="534" key="find.popup" timestamp="1649332427387">
+      <screen x="0" y="0" width="1280" height="672" />
+    </state>
+    <state x="347" y="69" width="587" height="534" key="find.popup/0.0.1280.672@0.0.1280.672" timestamp="1649332427387" />
+    <state x="303" y="0" width="672" height="678" key="search.everywhere.popup" timestamp="1649338730919">
+      <screen x="0" y="0" width="1280" height="672" />
+    </state>
+    <state x="303" y="0" width="672" height="678" key="search.everywhere.popup/0.0.1280.672@0.0.1280.672" timestamp="1649338730919" />
   </component>
 </project>

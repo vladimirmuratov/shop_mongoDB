@@ -64,7 +64,6 @@ router.post("/signInWithPassword", [
     check("email", "Email not valid").normalizeEmail().isEmail(),
     check("password", "Password is required").exists(),
     async (req, res) => {
-
         const errors = validationResult(req)
 
         if (!errors.isEmpty()) {
@@ -79,7 +78,6 @@ router.post("/signInWithPassword", [
             const {email, password} = req.body
 
             const existingUser = await User.findOne({email})
-
             if (!existingUser) {
                 return res.status(400).send({
                     error: {
@@ -102,7 +100,6 @@ router.post("/signInWithPassword", [
 
             const tokens = tokenService.generate({_id: existingUser._id})
             await tokenService.save(existingUser._id, tokens.refreshToken)
-
             res.status(200).send({...tokens, userId: existingUser._id})
 
         } catch (e) {

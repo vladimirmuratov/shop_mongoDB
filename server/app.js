@@ -3,8 +3,8 @@ const mongoose = require("mongoose")
 const cors = require("cors")
 const config = require("config")
 const chalk = require("chalk")
-const routes = require("../routes")
-const initDataBase = require("../startUp/initDataBase")
+const routes = require("./routes")
+const initDataBase = require("./startUp/initDataBase")
 
 const app = express()
 const PORT = config.get("port") ?? 8080

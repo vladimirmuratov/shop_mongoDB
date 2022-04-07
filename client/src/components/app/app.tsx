@@ -16,6 +16,7 @@ import {loadGoods} from "../../store/goods";
 import {getCurrentUser} from "../../store/user";
 import {useDispatch, useSelector} from "react-redux";
 import {RootState} from "../../store/store";
+import {ProfilePage} from "../../pages/profile-page/profile-page";
 
 function App() {
     const dispatch = useDispatch()
@@ -41,6 +42,7 @@ function App() {
                         </ProtectedRoute>
                         <Route exact path="/login" component={LoginPage}/>
                         <Route exact path="/admin" component={AdminPage}/>
+                        <Route exact path="/profile" component={ProfilePage}/>
                         <Route exact path="/:products?/:type?" component={MainPage}/>
                         <Route exact path="/products/:type/:id" component={ProductDetailsPage}/>
                         <Route path="*" component={NotFindPage}/>
