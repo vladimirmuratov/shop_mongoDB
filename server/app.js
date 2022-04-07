@@ -1,6 +1,7 @@
 const express = require("express")
 const mongoose = require("mongoose")
 const cors = require("cors")
+const path = require("path")
 const config = require("config")
 const chalk = require("chalk")
 const routes = require("./routes")
@@ -19,6 +20,16 @@ app.use("/api", routes)
 }else if(process.env.NODE_ENV === "development"){
     console.log(chalk.red("Development"))
 }*/
+
+if (process.env.NODE_ENV === "production") {
+    app.use("/", express.static(path.join(__dirname, "client")))
+
+    const indexPath = path.join(__dirname, "client", "index.html")
+
+    app.get("*", (req, res) => {
+        res.sendFile(indexPath)
+    })
+}
 
 async function start() {
     try {

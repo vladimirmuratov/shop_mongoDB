@@ -21,15 +21,8 @@
   <component name="ChangeListManager">
     <list default="true" id="00828a5f-4f98-49d9-9734-14322d377c18" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/app/app.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/app/app.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/header/header.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/header/header.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/header/header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/header/header.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/services/user.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/services/user.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/store/types/user.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/store/types/user.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/app/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/server/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/routes/auth.routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/routes/auth.routes.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/routes/user.routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/routes/user.routes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/pages/profile-page/profile-page.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/profile-page/profile-page.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/app.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,12 +43,15 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/server/client" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="ts.external.directory.path" value="D:\DEV\VLADILEN_MININ\MyProjects\internet-shop_mongoDb\client\node_modules\typescript\lib" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\DEV\VLADILEN_MININ\MyProjects\internet-shop_mongoDb\server\client" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\DEV\VLADILEN_MININ\MyProjects\internet-shop_mongoDb\server" />
     </key>
@@ -73,6 +69,7 @@
       <workItem from="1649236858662" duration="17739000" />
       <workItem from="1649319003834" duration="3422000" />
       <workItem from="1649333132360" duration="6074000" />
+      <workItem from="1649339440073" duration="3390000" />
     </task>
     <servers />
   </component>
